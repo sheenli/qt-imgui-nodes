@@ -7,6 +7,9 @@
 #include <QOpenGLExtraFunctions>
 #include <QObject>
 #include <QDebug>
+#include <imgui_node_editor.h>
+
+namespace ed = ax::NodeEditor;
 
 class NodosWidget : public QOpenGLWidget, private QOpenGLExtraFunctions
 {
@@ -21,13 +24,22 @@ public:
     {
         // CSR - This is needed to get keyboard event out to the event handlers
         setFocusPolicy(Qt::StrongFocus);
+
+        // Intialize NodeEditor
+        config.SettingsFile = "Simple.json";
+        g_Context = ed::CreateEditor(&config);
     }
 
 protected:
     void initializeGL() override;
     void paintGL() override;
 
-private:
+    // Node Editor
+    ed::Config config;
+    ed::EditorContext* g_Context;
+    void NodeEditor_Frame();
+
+private:    
     bool show_test_window = true;
     bool show_another_window = true;
     ImVec4 clear_color = ImColor(114, 144, 154);
