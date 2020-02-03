@@ -16,6 +16,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    ../external_libraries/imgui-node-editor/Examples/Blueprints/Blueprints.cpp \
+    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Source/ax/Builders.cpp \
+    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Source/ax/Drawing.cpp \
+    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Source/ax/Widgets.cpp \
     ../external_libraries/imgui-node-editor/NodeEditor/Source/crude_json.cpp \
     ../external_libraries/imgui-node-editor/NodeEditor/Source/imgui_canvas.cpp \
     ../external_libraries/imgui-node-editor/NodeEditor/Source/imgui_node_editor.cpp \
@@ -28,9 +32,16 @@ SOURCES += \
     ../external_libraries/qtimgui/QtImGui.cpp \
     NodosWidget.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    texture_manager.cpp
 
 HEADERS += \
+    ../external_libraries/imgui-node-editor/Examples/Common/Application/Include/Application.h \
+    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Include/ax/Builders.h \
+    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Include/ax/Drawing.h \
+    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Include/ax/Math2D.h \
+    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Include/ax/Math2D.inl \
+    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Include/ax/Widgets.h \
     ../external_libraries/imgui-node-editor/NodeEditor/Include/imgui_node_editor.h \
     ../external_libraries/imgui-node-editor/NodeEditor/Source/crude_json.h \
     ../external_libraries/imgui-node-editor/NodeEditor/Source/imgui_bezier_math.h \
@@ -43,6 +54,7 @@ HEADERS += \
     ../external_libraries/imgui/imgui.h \
     ../external_libraries/qtimgui/ImGuiRenderer.h \
     ../external_libraries/qtimgui/QtImGui.h \
+    texture_manager.h \
     NodosWidget.h \
     mainwindow.h
 
@@ -51,7 +63,11 @@ FORMS += \
 
 INCLUDEPATH += ../external_libraries/imgui/ \
     ../external_libraries/qtimgui/ \
-    ../external_libraries/imgui-node-editor/NodeEditor/Include
+    ../external_libraries/imgui-node-editor/NodeEditor/Include \
+    ../external_libraries/imgui-node-editor/Examples/Common/Application/Include \
+    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Include \
+    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Source
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

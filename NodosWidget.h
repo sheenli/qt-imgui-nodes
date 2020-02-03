@@ -8,8 +8,7 @@
 #include <QObject>
 #include <QDebug>
 #include <imgui_node_editor.h>
-
-namespace ed = ax::NodeEditor;
+#include <memory>
 
 class NodosWidget : public QOpenGLWidget, private QOpenGLExtraFunctions
 {
@@ -24,23 +23,16 @@ public:
     {
         // CSR - This is needed to get keyboard event out to the event handlers
         setFocusPolicy(Qt::StrongFocus);
-
-        // Intialize NodeEditor
-        config.SettingsFile = "Simple.json";
-        g_Context = ed::CreateEditor(&config);
     }
+
+    // CSR - we need to store our own font atlas, as ImGui will not copy it when we Build() it.
+    std::unique_ptr<ImFontAtlas> nodos_font = std::unique_ptr<ImFontAtlas>(new ImFontAtlas());
 
 protected:
     void initializeGL() override;
     void paintGL() override;
 
-    // Node Editor
-    ed::Config config;
-    ed::EditorContext* g_Context;
-    void NodeEditor_Frame();
 
-private:    
-    bool show_test_window = true;
-    bool show_another_window = true;
+private:
     ImVec4 clear_color = ImColor(114, 144, 154);
 };

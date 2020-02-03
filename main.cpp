@@ -3,8 +3,6 @@
 #include <QGuiApplication>
 #include <QTimer>
 #include <QSurfaceFormat>
-#include <QOpenGLWindow>
-#include <QOpenGLExtraFunctions>
 #include <NodosWidget.h>
 #include <mainwindow.h>
 
