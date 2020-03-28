@@ -21,7 +21,7 @@ void NodosWidget::initializeGL()
     config.PixelSnapH = false;
 
     ImFontAtlas* fa = ImGui::GetIO().Fonts;
-    fa->AddFontFromFileTTF("Karla-Regular.ttf", 22.0f, &config, ranges);
+    fa->AddFontFromFileTTF("..\\imgui\\misc\\fonts\\Karla-Regular.ttf", 22.0f, &config, ranges);
     fa->Build();
 
     // Now that there's an opengl context, we can init the node editor

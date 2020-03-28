@@ -1,5 +1,6 @@
 #include <Application.h>
 #include <texture_manager.h>
+#include <QDebug>
 
 // implement static members.
 std::unordered_map<GLuint, std::unique_ptr<QOpenGLTexture>> texture_manager::texture_owner;
@@ -28,14 +29,18 @@ int Application_GetTextureHeight(void* id)
 }
 
 void* texture_manager::LoadTexture(const char* path)
-{
+{    
+    // The Application_Loadtexture demo calls should be prepended to include
+    // the inter-project access scheme we use.
+    const QString build_path = QString(path).prepend("../imgui-node-editor/");
+    QImage qtex(build_path);
+    if(qtex.isNull())
+        exit(-1);
+
     // Use QT's image loading and opengl texture creation shit.
     // Create a raw pointer so we construct the thing
     // which creates a OpenGL ID and uploads it to the graphics card.
-
-    QImage j(path);
-
-    QOpenGLTexture* t_ptr = new QOpenGLTexture(QImage(path).mirrored());
+    QOpenGLTexture* t_ptr = new QOpenGLTexture(QImage(qtex).mirrored());
     t_ptr->setMinificationFilter(QOpenGLTexture::LinearMipMapLinear);
     t_ptr->setMagnificationFilter(QOpenGLTexture::Linear);
 

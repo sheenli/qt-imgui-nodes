@@ -16,44 +16,44 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    ../external_libraries/imgui-node-editor/Examples/Blueprints/Blueprints.cpp \
-    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Source/ax/Builders.cpp \
-    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Source/ax/Drawing.cpp \
-    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Source/ax/Widgets.cpp \
-    ../external_libraries/imgui-node-editor/NodeEditor/Source/crude_json.cpp \
-    ../external_libraries/imgui-node-editor/NodeEditor/Source/imgui_canvas.cpp \
-    ../external_libraries/imgui-node-editor/NodeEditor/Source/imgui_node_editor.cpp \
-    ../external_libraries/imgui-node-editor/NodeEditor/Source/imgui_node_editor_api.cpp \
-    ../external_libraries/imgui/imgui.cpp \
-    ../external_libraries/imgui/imgui_demo.cpp \
-    ../external_libraries/imgui/imgui_draw.cpp \
-    ../external_libraries/imgui/imgui_widgets.cpp \
-    ../external_libraries/qtimgui/ImGuiRenderer.cpp \
-    ../external_libraries/qtimgui/QtImGui.cpp \
+    ../imgui-node-editor/Examples/Blueprints/Blueprints.cpp \
+    ../imgui-node-editor/Examples/Common/BlueprintUtilities/Source/ax/Builders.cpp \
+    ../imgui-node-editor/Examples/Common/BlueprintUtilities/Source/ax/Drawing.cpp \
+    ../imgui-node-editor/Examples/Common/BlueprintUtilities/Source/ax/Widgets.cpp \
+    ../imgui-node-editor/NodeEditor/Source/crude_json.cpp \
+    ../imgui-node-editor/NodeEditor/Source/imgui_canvas.cpp \
+    ../imgui-node-editor/NodeEditor/Source/imgui_node_editor.cpp \
+    ../imgui-node-editor/NodeEditor/Source/imgui_node_editor_api.cpp \
+    ../imgui/imgui.cpp \
+    ../imgui/imgui_demo.cpp \
+    ../imgui/imgui_draw.cpp \
+    ../imgui/imgui_widgets.cpp \
+    ../qtimgui/ImGuiRenderer.cpp \
+    ../qtimgui/QtImGui.cpp \
     NodosWidget.cpp \
     main.cpp \
     mainwindow.cpp \
     texture_manager.cpp
 
 HEADERS += \
-    ../external_libraries/imgui-node-editor/Examples/Common/Application/Include/Application.h \
-    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Include/ax/Builders.h \
-    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Include/ax/Drawing.h \
-    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Include/ax/Math2D.h \
-    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Include/ax/Math2D.inl \
-    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Include/ax/Widgets.h \
-    ../external_libraries/imgui-node-editor/NodeEditor/Include/imgui_node_editor.h \
-    ../external_libraries/imgui-node-editor/NodeEditor/Source/crude_json.h \
-    ../external_libraries/imgui-node-editor/NodeEditor/Source/imgui_bezier_math.h \
-    ../external_libraries/imgui-node-editor/NodeEditor/Source/imgui_bezier_math.inl \
-    ../external_libraries/imgui-node-editor/NodeEditor/Source/imgui_canvas.h \
-    ../external_libraries/imgui-node-editor/NodeEditor/Source/imgui_extra_math.h \
-    ../external_libraries/imgui-node-editor/NodeEditor/Source/imgui_extra_math.inl \
-    ../external_libraries/imgui-node-editor/NodeEditor/Source/imgui_node_editor_internal.h \
-    ../external_libraries/imgui-node-editor/NodeEditor/Source/imgui_node_editor_internal.inl \
-    ../external_libraries/imgui/imgui.h \
-    ../external_libraries/qtimgui/ImGuiRenderer.h \
-    ../external_libraries/qtimgui/QtImGui.h \
+    ../imgui-node-editor/Examples/Common/Application/Include/Application.h \
+    ../imgui-node-editor/Examples/Common/BlueprintUtilities/Include/ax/Builders.h \
+    ../imgui-node-editor/Examples/Common/BlueprintUtilities/Include/ax/Drawing.h \
+    ../imgui-node-editor/Examples/Common/BlueprintUtilities/Include/ax/Math2D.h \
+    ../imgui-node-editor/Examples/Common/BlueprintUtilities/Include/ax/Math2D.inl \
+    ../imgui-node-editor/Examples/Common/BlueprintUtilities/Include/ax/Widgets.h \
+    ../imgui-node-editor/NodeEditor/Include/imgui_node_editor.h \
+    ../imgui-node-editor/NodeEditor/Source/crude_json.h \
+    ../imgui-node-editor/NodeEditor/Source/imgui_bezier_math.h \
+    ../imgui-node-editor/NodeEditor/Source/imgui_bezier_math.inl \
+    ../imgui-node-editor/NodeEditor/Source/imgui_canvas.h \
+    ../imgui-node-editor/NodeEditor/Source/imgui_extra_math.h \
+    ../imgui-node-editor/NodeEditor/Source/imgui_extra_math.inl \
+    ../imgui-node-editor/NodeEditor/Source/imgui_node_editor_internal.h \
+    ../imgui-node-editor/NodeEditor/Source/imgui_node_editor_internal.inl \
+    ../imgui/imgui.h \
+    ../qtimgui/ImGuiRenderer.h \
+    ../qtimgui/QtImGui.h \
     texture_manager.h \
     NodosWidget.h \
     mainwindow.h
@@ -61,12 +61,12 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
 
-INCLUDEPATH += ../external_libraries/imgui/ \
-    ../external_libraries/qtimgui/ \
-    ../external_libraries/imgui-node-editor/NodeEditor/Include \
-    ../external_libraries/imgui-node-editor/Examples/Common/Application/Include \
-    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Include \
-    ../external_libraries/imgui-node-editor/Examples/Common/BlueprintUtilities/Source
+INCLUDEPATH += ../imgui/ \
+    ../qtimgui/ \
+    ../imgui-node-editor/NodeEditor/Include \
+    ../imgui-node-editor/Examples/Common/Application/Include \
+    ../imgui-node-editor/Examples/Common/BlueprintUtilities/Include \
+    ../imgui-node-editor/Examples/Common/BlueprintUtilities/Source
 
 
 # Default rules for deployment.
