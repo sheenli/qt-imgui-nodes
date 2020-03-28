@@ -24,10 +24,10 @@ SOURCES += \
     ../imgui-node-editor/NodeEditor/Source/imgui_canvas.cpp \
     ../imgui-node-editor/NodeEditor/Source/imgui_node_editor.cpp \
     ../imgui-node-editor/NodeEditor/Source/imgui_node_editor_api.cpp \
-    ../imgui/imgui.cpp \
-    ../imgui/imgui_demo.cpp \
-    ../imgui/imgui_draw.cpp \
-    ../imgui/imgui_widgets.cpp \
+    ../imgui-node-editor/ThirdParty/imgui/imgui.cpp \
+    ../imgui-node-editor/ThirdParty/imgui/imgui_demo.cpp \
+    ../imgui-node-editor/ThirdParty/imgui/imgui_draw.cpp \
+    ../imgui-node-editor/ThirdParty/imgui/imgui_widgets.cpp \
     ../qtimgui/ImGuiRenderer.cpp \
     ../qtimgui/QtImGui.cpp \
     NodosWidget.cpp \
@@ -51,7 +51,7 @@ HEADERS += \
     ../imgui-node-editor/NodeEditor/Source/imgui_extra_math.inl \
     ../imgui-node-editor/NodeEditor/Source/imgui_node_editor_internal.h \
     ../imgui-node-editor/NodeEditor/Source/imgui_node_editor_internal.inl \
-    ../imgui/imgui.h \
+    ../imgui-node-editor/ThirdParty/imgui/imgui.h \
     ../qtimgui/ImGuiRenderer.h \
     ../qtimgui/QtImGui.h \
     texture_manager.h \
@@ -61,7 +61,7 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
 
-INCLUDEPATH += ../imgui/ \
+INCLUDEPATH += ../imgui-node-editor/ThirdParty/imgui/ \
     ../qtimgui/ \
     ../imgui-node-editor/NodeEditor/Include \
     ../imgui-node-editor/Examples/Common/Application/Include \
